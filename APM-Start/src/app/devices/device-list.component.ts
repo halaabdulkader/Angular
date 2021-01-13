@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
 })
 export class DeviceListComponent {
     pageTitle: string = 'Devices List';
+    imageWidth: number=50;
+    imageMargin: number=2;
+    showImage: boolean=false;
     devices: any[] = [
         {
           "productId": 1,
@@ -37,4 +40,9 @@ export class DeviceListComponent {
           "starRating": 4.8,
           "imageUrl": "assets/images/hammer.png"
         }];
+        toggleImage(): void{
+          this.showImage = !this.showImage;
+        };
+
+
 }

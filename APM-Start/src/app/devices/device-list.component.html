@@ -16,12 +16,13 @@
         </div>
         <div class='table-responsive'>
             <table class='table'
-            *ngIF= 'devices && devices.length'>
+           >
                 <thead>
                     <tr>
                         <th>
-                            <button class='btn btn-primary'>
-                            Show Image
+                            <button class='btn btn-primary'
+                            (click)='toggleImage()'>
+                            {{showImage ? 'Hide' : 'Show'}} Image
                         </button>
                         </th>
                         <th>Device</th>
@@ -32,6 +33,13 @@
                 </thead>
                 <tbody>
                     <tr *ngFor='let device of devices'>
+                        <td>
+                            <img *ngIf='showImage'
+                            [src]='device.imageUrl'
+                            [title]='device.deviceName'
+                            [style.width.px]='imageWidth'
+                            [style.margin.px]='imageMargin'>
+                        </td>
                         <td>{{device.deviceName}}</td>
                         <td>{{device.deviceCode}}</td>
 
