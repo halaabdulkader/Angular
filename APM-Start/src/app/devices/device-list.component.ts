@@ -1,48 +1,53 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { IDevice } from './device';
 @Component({
-    selector: 'pm-devices',
-    templateUrl: './device-list.component.html'
+  selector: 'pm-devices',
+  templateUrl: './device-list.component.html',
+  styleUrls: ['./device-list.component.css']
 })
-export class DeviceListComponent {
-    pageTitle: string = 'Devices List';
-    imageWidth: number=50;
-    imageMargin: number=2;
-    showImage: boolean=false;
-    devices: any[] = [
-        {
-          "productId": 1,
-          "deviceName": "Leaf Rake",
-          "deviceCode": "GDN-0011",
-          "releaseDate": "March 19, 2019",
-          "description": "Leaf rake with 48-inch wooden handle.",
-          "price": 19.95,
-          "starRating": 3.2,
-          "imageUrl": "assets/images/leaf_rake.png"
-        },
-        {
-          "productId": 2,
-          "productName": "Garden Cart",
-          "productCode": "GDN-0023",
-          "releaseDate": "March 18, 2019",
-          "description": "15 gallon capacity rolling garden cart",
-          "price": 32.99,
-          "starRating": 4.2,
-          "imageUrl": "assets/images/garden_cart.png"
-        },
-        {
-          "productId": 5,
-          "productName": "Hammer",
-          "productCode": "TBX-0048",
-          "releaseDate": "May 21, 2019",
-          "description": "Curved claw steel hammer",
-          "price": 8.9,
-          "starRating": 4.8,
-          "imageUrl": "assets/images/hammer.png"
-        }];
-        toggleImage(): void{
-          this.showImage = !this.showImage;
-        };
+export class DeviceListComponent implements OnInit {
+  
+  pageTitle: string = 'Devices List';
+  imageWidth: number = 50;
+  imageMargin: number = 2;
+  showImage: boolean = false;
+  listFilter: string = 'cart';
+  devices: IDevice[] = [
+    {
 
+      "deviceName": "Leaf Rake",
+      "deviceCode": "GDN-0011",
+
+      "deviceOS": "Leaf rake with 48-inch wooden handle.",
+      "deviceStatus": 19.95,
+
+      "imageUrl": "assets/images/leaf_rake.png"
+    },
+    {
+
+      "deviceName": "Garden Cart",
+      "deviceCode": "GDN-0023",
+
+      "deviceOS": "15 gallon capacity rolling garden cart",
+      "deviceStatus": 32.99,
+
+      "imageUrl": "assets/images/garden_cart.png"
+    },
+    {
+
+      "deviceName": "Hammer",
+      "deviceCode": "TBX-0048",
+
+      "deviceOS": "Curved claw steel hammer",
+      "deviceStatus": 8.9,
+
+      "imageUrl": "assets/images/hammer.png"
+    }];
+  toggleImage(): void {
+    this.showImage = !this.showImage;
+  };
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
 
 }
