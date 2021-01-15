@@ -29,10 +29,12 @@
                         <th>Code</th>
                         <th>Available</th>
                         <th>OS</th>
+                        <th>Rating</th>
+
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor='let device of devices'>
+                    <tr *ngFor='let device of filteredDevices'>
                         <td>
                             <img *ngIf='showImage'
                                  [src]='device.imageUrl'
@@ -44,6 +46,7 @@
                         <td>{{device.deviceCode | convertToSpaces: '-'}}</td>
                         <td>{{device.deviceStatus | currency}}</td>
                         <td>{{device.deviceOS}}</td>
+                        <td><pm-star [rating]='device.deviceRating'></pm-star></td>
 
                     </tr>
 

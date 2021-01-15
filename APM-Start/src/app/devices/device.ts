@@ -4,4 +4,5 @@ export interface IDevice{
     deviceStatus: number;
     deviceOS: string;
     imageUrl: string;
+    deviceRating: number;
 }
