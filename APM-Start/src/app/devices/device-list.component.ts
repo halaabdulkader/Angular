@@ -43,8 +43,15 @@ export class DeviceListComponent implements OnInit {
     this.showImage = !this.showImage;
   };
   ngOnInit(): void {
-    this.devices = this.deviceService.getDevices();
-    this.filteredDevices = this.devices;
+    this.deviceService.getDevices().subscribe({
+      next: devices => {
+        this.devices = devices;
+        this.filteredDevices = this.devices;
+      }
+     // error: err => this.errorMessage = err
+
+    });
+    
   }
   onRatingClicked(message : string): void{
     this.pageTitle='Device List: '+ message;
