@@ -13,7 +13,7 @@ export class DeviceService {
   getDevices(): Observable<IDevice[]> {
    // this.getDevices(): Observable<IDevice[]>{
      return this.http.get<IDevice[]>(this.deviceUrl);
-     
+    
 }
 private handleError(err: HttpResponse<Text>)  {
   let errorMessage = '';
