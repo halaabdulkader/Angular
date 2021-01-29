@@ -48,7 +48,13 @@
                                  [style.width.px]='imageWidth'
                                  [style.margin.px]='imageMargin'>
                         </td>
-                        <td>{{device.deviceName}}</td>
+                        <td>
+                            <a [routerLink]="['/devices' , device.deviceId]">
+                                {{ device.deviceName}}
+                            </a>
+
+                        </td>
+                        
                         <td>{{device.deviceCode | convertToSpaces: '-'}}</td>
                         <td>{{device.deviceStatus | currency}}</td>
                         <td>{{device.deviceOS}}</td>

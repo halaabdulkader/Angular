@@ -1,5 +1,5 @@
 [
-  {
+  {"deviceId": "1",
     "deviceName": "Leaf Rake",
       "deviceCode": "GDN-0011",
       "deviceOS": "Leaf rake with 48-inch wooden handle.",
@@ -7,7 +7,7 @@
       "deviceRating": 4.8,
       "imageUrl": "assets/images/leaf_rake.png"
   },
-  {
+  {"deviceId": "2",
     "deviceName": "Garden Cart",
     "deviceCode": "GDN-0023",
     "deviceOS": "15 gallon capacity rolling garden cart",
@@ -15,7 +15,7 @@
     "deviceRating": 2.8,
     "imageUrl": "assets/images/garden_cart.png"
   },
-  {
+  {"deviceId": "3",
     "deviceName": "Hammer",
     "deviceCode": "TBX-0048",
     "deviceOS": "Curved claw steel hammer",

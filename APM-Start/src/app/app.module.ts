@@ -7,6 +7,7 @@ import { ConvertToSpacesPipe } from './shared/convert-to-spaces.pipe';
 import {StarComponent} from './shared/star.component';
 import { HttpClientModule} from '@angular/common/http';
 import { DeviceDetailComponent } from './devices/device-detail.component';
+import { DeviceDetailGuard } from './devices/device-detail.guard';
 import { WelcomeComponent } from './home/welcome.component';
 import { RouterModule } from '@angular/router';
 @NgModule({
@@ -24,7 +25,9 @@ import { RouterModule } from '@angular/router';
     HttpClientModule,
     RouterModule.forRoot([
       { path: 'devices', component: DeviceListComponent },
-      { path: 'devices/:id', component: DeviceDetailComponent },
+      { path: 'devices/:id', 
+      canActivate:[DeviceDetailGuard],
+      component: DeviceDetailComponent },
       { path: 'welcome', component: WelcomeComponent },
       { path: '', redirectTo: 'welcome' ,pathMatch: 'full' },
       { path: '**', redirectTo: 'welcome' ,pathMatch: 'full' }

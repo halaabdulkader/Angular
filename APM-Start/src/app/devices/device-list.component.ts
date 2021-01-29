@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IDevice } from './device';
 import { DeviceService } from './device.service';
 @Component({
-  selector: 'pm-devices',
+ 
   templateUrl: './device-list.component.html',
   styleUrls: ['./device-list.component.css']
 })
