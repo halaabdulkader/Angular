@@ -16,13 +16,15 @@ export class DeviceDetailComponent implements OnInit {
     let id = +this.route.snapshot.paramMap.get('id');
     this.pageTitle += `: ${id}`;
     this.device={
-      "deviceId": id,
-      "deviceName": "Garden Cart",
-      "deviceCode": "GDN-0023",
-      "deviceOS": "15 gallon capacity rolling garden cart",
-      "deviceStatus": 32.99,
-      "deviceRating": 4.3,
-      "imageUrl": "assets/images/garden_cart.png"
+      "deviceId": 1,
+    "deviceName": "iPhone 6",
+      "deviceCode": "ASSET 0010",
+      "deviceOS": "iOS",
+      "deviceStatus": "Available",
+      "product": "WebSDK",
+      "deviceRating": 4.8,
+      "imageUrl": "assets/images/iphone6.jpg"
+  
     }
   }
   onBack(): void{
