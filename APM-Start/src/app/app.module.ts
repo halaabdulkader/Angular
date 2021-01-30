@@ -10,6 +10,7 @@ import { DeviceDetailComponent } from './devices/device-detail.component';
 import { DeviceDetailGuard } from './devices/device-detail.guard';
 import { WelcomeComponent } from './home/welcome.component';
 import { RouterModule } from '@angular/router';
+import { QaSolutionsComponent } from './qaSolutions/qa-solutions.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +18,8 @@ import { RouterModule } from '@angular/router';
     ConvertToSpacesPipe,
     StarComponent,
     DeviceDetailComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    QaSolutionsComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +31,7 @@ import { RouterModule } from '@angular/router';
       canActivate:[DeviceDetailGuard],
       component: DeviceDetailComponent },
       { path: 'welcome', component: WelcomeComponent },
+      { path: 'qaSolutions', component: QaSolutionsComponent},
       { path: '', redirectTo: 'welcome' ,pathMatch: 'full' },
       { path: '**', redirectTo: 'welcome' ,pathMatch: 'full' }
     ])
